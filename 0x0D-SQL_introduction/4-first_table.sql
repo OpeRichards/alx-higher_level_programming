@@ -1,3 +1,4 @@
 -- Create a table
 
-CREATE IF NOT EXISTS TABLES(id INT, name VARCHAR(256));
+CREATE IF NOT EXISTS TABLES first_table(id INT, 
+name VARCHAR(256));
