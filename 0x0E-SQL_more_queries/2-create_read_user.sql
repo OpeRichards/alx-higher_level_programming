@@ -1,8 +1,8 @@
 -- CREATE DATABASES
-CREATE DATABASES 'hbtn_0d_2';
+CREATE DATABASES IF NOT EXISTS 'hbtn_0d_2';
 
 -- CREATE USER WITH PASSWORD
-CREATE USER 'user_0d_2'@'localhost' 
+CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost' 
 IDENTIFIED BY 'user_0d_2_pwd';
 
 -- CREATE SELECT permissionn to user
