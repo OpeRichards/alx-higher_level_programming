@@ -1,4 +1,3 @@
--- List all privileges of MySQL users
+-- Create MySQL users with password
 
-SHOW GRANTS FOR user_0d_1@locahost;
-SHOW GRANTS FOR user_0d_2@localhost;
+CREATE USER IF NOT EXISTS user_0d_1@localhost IDENTIFIED BY user_0d_1_pwd;
