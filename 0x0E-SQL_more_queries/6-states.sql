@@ -1,0 +1,8 @@
+-- Create database
+CREATE DATABASE IF NOT EXISTS hbtn_od_usa;
+
+-- Create table
+CREATE TABLE IF NOT EXISTS states(
+	id INT UNIQUE AUTO GENERATED NOT NULL PRIMARY KEY,
+	name VARCAHR(256) NOT NULL,
+);
