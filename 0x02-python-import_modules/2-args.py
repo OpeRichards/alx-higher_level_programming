@@ -6,7 +6,7 @@ if __name__ == '__main__':
         print('{} arguments.'.format(num_args))
     elif num_args == 1:
         print('{} argument:'.format(num_args))
-    else:   
+    else:
         print('{} arguments:'.format(num_args))
     for item in range(num_args):
         print('{}: {}'.format(item + 1, argv[item + 1]))
