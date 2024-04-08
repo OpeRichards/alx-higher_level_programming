@@ -4,5 +4,5 @@
 
 class Square:
     """Square has equal sizes.
-    However, this is an empty square class"""    
+    However, this is an empty square class"""
     pass
