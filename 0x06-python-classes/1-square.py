@@ -5,5 +5,5 @@
 class Square:
     """Square has equal sizes.
     Initialize the size of square"""
-    def  __init__(self, size):
+    def __init__(self, size):
         self.__size = size
