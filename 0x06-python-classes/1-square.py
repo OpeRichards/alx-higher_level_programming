@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+"""Declare a class Square."""
+
+
 class Square:
-    def __init__(self, size):
-        """Declare a class Square.
-        Initialize a size of square."""
+    """Square has equal sizes.
+    Initialize the size of square"""
+    def  __init__(self, size):
         self.__size = size
