@@ -12,7 +12,7 @@ class Square:
         Returns:
             None
         """
-        if int(size) == False:
+        if size != int(size):
             raise TypeError('size must be an integer')
         
         if size < 0:
