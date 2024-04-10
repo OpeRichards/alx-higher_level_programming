@@ -1,0 +1,8 @@
+import math
+
+class TestAddinteger(a, b):
+    if a != int():
+        raise TypeError(a must be an integer)
+    if b != int():
+        raise TypeError(b must be an integer)
+    return (a + b)
