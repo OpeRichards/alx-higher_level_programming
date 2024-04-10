@@ -3,6 +3,6 @@
 
 
 class Square:
-    """Square has equal sizes.
-    However, this is an empty square class"""
+    """Create four sided shape with equal sizes.
+    However, this is an empty square."""
     pass
