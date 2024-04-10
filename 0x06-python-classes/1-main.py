@@ -6,11 +6,11 @@ print(type(my_square))
 print(my_square.__dict__)
 
 try:
-    print(my_sqaure.size)
+    print(my_square.size)
 except Exception as e:
     print(e)
 
 try:
-    print(my_sqaure.__size)
+    print(my_square.__size)
 except Exception as e:
     print(e)
