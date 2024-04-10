@@ -7,11 +7,7 @@ class Square:
     It has equal sides."""
     def __init__(self, size=0):
         """Initialize the size of square.
-        Args:
-            int(size): a side of the square
-        Returns:
-            None
-        """
+        int(size): size of a side of square."""
         if size != int(size):
             raise TypeError('size must be an integer')
 
