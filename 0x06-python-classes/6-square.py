@@ -47,7 +47,7 @@ class Square:
         return self.__position
 
     @position.setter
-    def size(self, value):
+    def position(self, value):
         """Set the position of the square.
         Args:
             value (tuple): The new position of the square.
