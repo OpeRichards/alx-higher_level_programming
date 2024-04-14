@@ -56,7 +56,7 @@ class Square:
             or contains negative values.
         """
         if len(value) != 2 or type(value) != tuple or \
-            not all([isinstance(type(num), int) for num in value]) or \
+            not all([isinstance(num, int) for num in value]) or \
             not all([num >= 0 for num in value]):
             raise TypeError('position must be a tuple of 2 positive integers')
             
