@@ -1,0 +1,33 @@
+import unittest
+>>> MyList = __import__('1-my_list').MyList
+
+class TestMyList(unittest.TestCase):
+
+    >>> def test_print_sorted(self):
+        my_list = MyList()
+        my_list.append(1)
+        my_list.append(4)
+        my_list.append(2)
+        self.assertEqual(my_list.print_sorted(), [1, 2, 4])
+
+    def test_print_sorted_empty_list(self)
+        empty_list = MyList()
+        self.assertEqual(empty_list.print_sorted(), [])
+
+    def test_print_sorted_repeated_elements(self):
+        repeated_list = MyList()
+        repeated_list.append(3)
+        repeated_list.append(2)
+        repeated_list.append(3)
+        repeated_list.append(1)
+        repeated_list.append(2)
+        self.assertEqual(repeated_list.print_sorted(), [1, 2, 3])
+
+    def test_print_sorted_single_element(self):
+        single_element_list = MyList()
+        single_element_list.append(5)
+        self.assertEqual(singleEqual(single_element_list.print_sorted(), [5]))
+
+
+if __name__ == '__main__':
+    unittest.main()
