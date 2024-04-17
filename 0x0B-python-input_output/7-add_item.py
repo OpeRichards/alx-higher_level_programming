@@ -11,7 +11,7 @@ load_from_json_file =\
 
 try:
     j_list = load_from_json_file('add_item.json')
-except:
+except IndexError:
     j_list = []
 
 for i in range(1, len(argv)):
