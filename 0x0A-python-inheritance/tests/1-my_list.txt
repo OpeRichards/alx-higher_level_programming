@@ -1,33 +1,85 @@
-import unittest
->>> MyList = __import__('1-my_list').MyList
+The ``1-my_list`` module
+======================
 
-class TestMyList(unittest.TestCase):
+Using ``MyList``
+-------------------
 
-    >>> def test_print_sorted(self):
-        my_list = MyList()
-        my_list.append(1)
-        my_list.append(4)
-        my_list.append(2)
-        self.assertEqual(my_list.print_sorted(), [1, 2, 4])
+Importing the function from the module:
+        >>> MyList = __import__("1-my_list").MyList
 
-    def test_print_sorted_empty_list(self)
-        empty_list = MyList()
-        self.assertEqual(empty_list.print_sorted(), [])
+Checking for module docstring:
+         >>> m = __import__("1-my_list").__doc__
+         >>> len(m) > 1
+         
 
-    def test_print_sorted_repeated_elements(self):
-        repeated_list = MyList()
-        repeated_list.append(3)
-        repeated_list.append(2)
-        repeated_list.append(3)
-        repeated_list.append(1)
-        repeated_list.append(2)
-        self.assertEqual(repeated_list.print_sorted(), [1, 2, 3])
+Checking for class docstring:
+         >>> c = __import__("1-my_list").MyList.__doc__
+         >>> len(c) > 1
+        
 
-    def test_print_sorted_single_element(self):
-        single_element_list = MyList()
-        single_element_list.append(5)
-        self.assertEqual(singleEqual(single_element_list.print_sorted(), [5]))
+Checking for method docstring:
+	 >>> mod = __import__("1-my_list").MyList.print_sorted.__doc__
+	 >>> len(mod) > 1
+	 
 
+Checking that MyList inherits from list:
+	 >>> issubclass(MyList, list)
+	 
 
-if __name__ == '__main__':
-    unittest.main()
+Checking for empty list:
+	 >>> l = MyList()
+	 >>> l.print_sorted()
+	 
+
+Checking that appendng works:
+	 >>> l.append(1)
+	 >>> l.append(2)
+	 >>> l.append(3)
+	 >>> l.append(4)
+	 >>> print(l)
+	 
+
+Checking for list already in correct order:
+	 >>> l.print_sorted()
+	 
+
+Checking for reversed order list:
+	 >>> l = MyList()
+	 >>> l.append(4)
+	 >>> l.append(3)
+	 >>> l.append(2)
+	 >>> l.append(1)
+	 >>> print(l)
+	 
+	 >>> l.print_sorted()
+	 
+	 >>> print(l)
+	 
+
+Checking for one negative number:
+	 >>> l.append(-1)
+	 >>> l.append(5)
+	 >>> print(l)
+	 
+	 >>> l.print_sorted()
+	 
+	 >>> print(l)
+	 
+
+Checking for all negative numbers:
+	 >>> l = MyList()
+	 >>> l.append(-10)
+	 >>> l.append(-1)
+	 >>> l.append(-7)
+	 >>> l.append(-2)
+	 >>> l.append(-8)
+	 >>> print(l)
+	
+	 >>> l.print_sorted()
+	 
+	 >>> print(l)
+         
+
+Checking for too many arguments:
+	 >>> l.print_sorted(1)
+	 
