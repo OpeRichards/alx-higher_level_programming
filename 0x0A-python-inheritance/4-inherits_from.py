@@ -12,4 +12,4 @@ def inherits_from(obj, a_class):
         True (bool): If object is exactly an instance of the specified class.
         False (bool): If object is not an instance of the specified class.
     """
-    return (issubclass(type(obj), a_class) and type(obj) != a_class)
+    return(issubclass(type(obj), a_class) and type(obj) != a_class)
