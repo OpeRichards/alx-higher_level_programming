@@ -3,13 +3,14 @@
 
 
 class Student:
-    """A class Student that defines a student data.
-    Args:
-        first_name (str): First name of a student.
-        last_name (str): Last name of a student.
-        age (int): Age of a student.
-    """
+    """A class Student that defines a student data."""
     def __init__(self, first_name, last_name, age):
+        """Initializes class Student.
+        Args:
+            first_name (str): First name of a student.
+            last_name (str): Last name of a student.
+            age (int): Age of a student.
+        """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
