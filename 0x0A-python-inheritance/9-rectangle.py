@@ -30,10 +30,6 @@ class Rectangle(BaseGeometry):
         area = self.__width * self.__height
         return area
 
-    def __print__(self):
-        """This method calls the print function to print."""
-        print()
-
     def __str__(self):
         """This method returns a specified string output."""
         return ("[Rectangle] {:d}/{:d}".format(self.__width, self.__height))
