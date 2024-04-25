@@ -36,12 +36,9 @@ Holberton School
 >>> text_indentation("Holberton. School? How are you: John")
 Holberton.
 <BLANKLINE>
-<BLANKLINE>
 School?
 <BLANKLINE>
-<BLANKLINE>
 How are you:
-<BLANKLINE>
 <BLANKLINE>
 John
 
@@ -54,33 +51,23 @@ John
 ... Truly, learning technology, especially, software engineering is an adventure. Enjoy.""")
 This is a new learning.
 <BLANKLINE>
-<BLANKLINE>
 Learning technology can be interesting and challenging.
-<BLANKLINE>
 <BLANKLINE>
 Sound conflicting, right?
 <BLANKLINE>
-<BLANKLINE>
 It may appear so until you learn it your self.
-<BLANKLINE>
 <BLANKLINE>
 Yes, you should.
 <BLANKLINE>
-<BLANKLINE>
 Then you will understand that it is interesting, the challenges interesting and solving them is fun.
-<BLANKLINE>
 <BLANKLINE>
 A odd way to picture something challenging, right?
 <BLANKLINE>
-<BLANKLINE>
 Unless it is an adventure.
-<BLANKLINE>
 <BLANKLINE>
 Truly, learning technology, especially, software engineering is an adventure.
 <BLANKLINE>
-<BLANKLINE>
 Enjoy.
-<BLANKLINE>
 <BLANKLINE>
 
 
