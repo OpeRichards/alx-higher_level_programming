@@ -1,0 +1,82 @@
+doctest for ``5-text_indentation.py`` module
+============================================
+
+``text_indentation()`` prints text with 2 new lines after each of these characters . , ? and :
+------------------------------------------------------------------------------------------
+
+# Import ``text_indentation`` from ``5-text_indentation`` module
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+""" SUCCESSFUL TEST CONDITIONS """
+==================================
+# Check that first line contains #!/usr/bin/python3
+>>> with open("5-text_indentation.py", "r") as file:
+...     first_line = file.readline().strip()
+>>> first_line == "#!/usr/bin/python3"
+True
+
+# Checks if there is no import of any module
+>>> with open("5-text_indentation.py", "r") as file:
+...     for line in file:
+...         if line.strip().startswith("import") or line.strip().startswith("from"):
+...             print("Import statement found:", line.strip())
+...
+
+# Checks that module is documented
+>>> bool('5-text_indentation'.__doc__)
+True
+
+# Testing function with string as correct input
+>>> text_indentation("""This is a new learning. Learning technology can be interesting and challenging. \
+... Sound conflicting, right? It may appear so until you learn it your self. Yes, you should. \
+... Then you will understand that it is interesting, the challenges interesting and solving them is fun. \
+... A odd way to picture something challenging, right? Unless it is an adventure. \
+... Truly, learning technology, especially, software engineering is an adventure. Enjoy.""")
+This is a new learning.
+<BLANKLINE>
+<BLANKLINE>
+Learning technology can be interesting and challenging.
+<BLANKLINE>
+<BLANKLINE>
+Sound conflicting, right?
+<BLANKLINE>
+<BLANKLINE>
+It may appear so until you learn it your self.
+<BLANKLINE>
+<BLANKLINE>
+Yes, you should.
+<BLANKLINE>
+<BLANKLINE>
+Then you will understand that it is interesting, the challenges interesting and solving them is fun.
+<BLANKLINE>
+<BLANKLINE>
+A odd way to picture something challenging, right?
+<BLANKLINE>
+<BLANKLINE>
+Unless it is an adventure.
+<BLANKLINE>
+<BLANKLINE>
+Truly, learning technology, especially, software engineering is an adventure.
+<BLANKLINE>
+<BLANKLINE>
+Enjoy.
+<BLANKLINE>
+<BLANKLINE>
+
+
+# Pycodestyle validation
+>>> import pycodestyle
+>>> pycodestyle.StyleGuide().check_files(['4-print_square.py']).total_errors == 0
+True
+
+
+""" TEST CONDITIONS WHERE AN ERROR IS RAISED """
+================================================
+
+# Testing function with not a string
+>>> text_indentation(334)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
