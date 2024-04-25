@@ -28,6 +28,12 @@ True
 >>> bool('5-text_indentation'.__doc__)
 True
 
+
+# Testing function with string as correct input
+>>> text_indentation("Holberton School")
+Holberton School
+
+
 # Testing function with string as correct input
 >>> text_indentation("Holberton. School? How are you: John")
 Holberton.
@@ -77,7 +83,7 @@ True
 ================================================
 
 # Testing function with not a string
->>> text_indentation(334)
+>>> text_indentation(34)
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
