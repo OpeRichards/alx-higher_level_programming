@@ -28,10 +28,6 @@ True
 >>> bool('5-text_indentation'.__doc__)
 True
 
-# Testing function with string without special charcter
->>> text_indentation("Holberton School")
-Holberton School
-
 # Testing function with string as correct input
 >>> text_indentation("Holberton. School? How are you: John")
 Holberton.

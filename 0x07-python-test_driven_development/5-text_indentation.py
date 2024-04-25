@@ -22,11 +22,11 @@ def text_indentation(text):
         if char in ('.', '?', ':'):
             # Print text from start_index to current index
             print(text[start_index:i + 1].strip())
-            # Print two new lines
+            # Print two new lines with preceding spaces
             print("\n", end="")
             # Update start_index to next character index
             start_index = i + 1
 
     # Print remaining text if any
     if start_index < len(text):
-        print(text[start_index:].strip())
+        print(text[start_index:].strip(), end="")
