@@ -12,10 +12,10 @@ def text_indentation(text):
     # Check if text is a string
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    
+
     # Initialize starting index of each line
     start_index = 0
-    
+
     # Iterate through each charcter in the text
     for i, char in enumerate(text):
         # If char is `.`, `?` or `:`
