@@ -1,0 +1,77 @@
+doctest for ``4-print_square.py`` module
+========================================
+
+``print_square()`` prints a square with character #
+---------------------------------------------------
+
+# Import ``print_square`` from ``4-print_square`` module
+
+>>> print_square = __import__('4-print_square').print_square
+
+
+""" SUCCESSFUL TEST CONDITIONS """
+==================================
+# Check that first line contains #!/usr/bin/python3
+>>> with open("4-print_square.py", "r") as file:
+...     first_line = file.readline().strip()
+>>> first_line == "#!/usr/bin/python3"
+True
+
+# Checks if there is no import of any module
+>>> with open("3-say_my_name.py", "r") as file:
+...     for line in file:
+...         if line.strip().startswith("import") or line.strip().startswith("from"):
+...             print("Import statement found:", line.strip())
+...
+
+# Checks that module is documented
+>>> bool('4-print_square'.__doc__)
+True
+
+# Testing functions with integer
+>>> print_square(2)
+##
+##
+
+# Testing functions with integer
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+
+# Pycodestyle validation
+>>> import pycodestyle
+>>> pycodestyle.StyleGuide().check_files(['4-print_square.py']).total_errors == 0
+True
+
+
+""" TEST CONDITIONS WHERE AN ERROR IS RAISED """
+================================================
+
+# Testing size is not an integer
+>>> print_square("Richard")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+
+# Testing size is not less than 0
+>>> print_square(-5)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+
+# Testing size is not float and less 0
+>>> print_square(-4.3)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
