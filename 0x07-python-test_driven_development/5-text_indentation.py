@@ -2,7 +2,7 @@
 """This module defines a function ``text_indentation``."""
 
 
-def text_indentation(text):
+def text_indentation(text=""):
     """Prints text with 2 new lines after each `.`, `?` or `:` charcters.
     Args:
         text (str): Input to break into separate lines.
