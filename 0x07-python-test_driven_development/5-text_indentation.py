@@ -23,7 +23,7 @@ def text_indentation(text):
             # Print text from start_index to current index
             print(text[start_index:i + 1].strip())
             # Print two new lines
-            print("\n", end="")
+            print("\n" * 2, end="")
             # Update start_index to next character index
             start_index = i + 1
 

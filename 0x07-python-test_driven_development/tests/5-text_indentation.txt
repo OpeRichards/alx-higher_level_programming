@@ -28,6 +28,24 @@ True
 >>> bool('5-text_indentation'.__doc__)
 True
 
+# Testing function with string without special charcter
+>>> text_indentation("Holberton School")
+Holberton School
+
+# Testing function with string as correct input
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+<BLANKLINE>
+School?
+<BLANKLINE>
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+<BLANKLINE>
+John
+
+
 # Testing function with string as correct input
 >>> text_indentation("""This is a new learning. Learning technology can be interesting and challenging. \
 ... Sound conflicting, right? It may appear so until you learn it your self. Yes, you should. \
