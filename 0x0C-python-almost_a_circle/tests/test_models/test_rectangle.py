@@ -178,8 +178,33 @@ class TestMaxInteger(unittest.TestCase):
     def test_pycodestyle(self):
        """Test if models/rectangle.py follows Pycodestyle."""
        pycodestyle_errors = os.system('pycodestyle models/rectangle.py')
-       self.assertEqual(pycodestyle_errors, 0) 
-    
+       self.assertEqual(pycodestyle_errors, 0)
+
+    def test_area_method_exist(self):
+        """Test that area function exist and callable."""
+        r = Rectangle(1, 2)
+        self.assertTrue(hasattr(r, "area"))
+        self.assertTrue(callable(getattr(r, "area")))
+
+    def test_area_method_rectangle(self):
+        """Test that area function work as expected."""
+        r = Rectangle(10, 12)
+        self.assertEqual(r.area(), 120)
+
+    def test_area_method_rectangle(self):
+        """Test that area function work as expected."""
+        r = Rectangle(12, 10)
+        self.assertEqual(r.area(), 120)
+
+    def test_area_method_square(self):
+        """Test that area function work as expected."""
+        r = Rectangle(10, 10)
+        self.assertEqual(r.area(), 100)
+
+    def test_area_rectangle_with_x_and_y(self):
+        r = Rectangle(10, 12, 2, 3)
+        self.assertEqual(r.area(), 120)
+
 
 if __name__ == '__main__':
     unittest.main()
