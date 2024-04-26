@@ -235,6 +235,11 @@ class TestMaxInteger(unittest.TestCase):
         expected_output = print("#\n")
         self.assertEqual(r.display(), expected_output)
 
+    def test_str_method_exists(self):
+        r = Rectangle(1, 2)
+        self.assertTrue(hasattr(r, "__str__"))
+        self.assertTrue(callable(getattr(r, "__str__")))
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -8,11 +8,11 @@ from models.base import Base
 class Rectangle(Base):
     """class Rectangle inherits from Base."""
     def __init__(self, width, height, x=0, y=0, id=None):
+        super().__init__(id)  # Call the Base class constructor with id
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
 
     @property
     def width(self):
@@ -80,3 +80,8 @@ class Rectangle(Base):
         """Prints in stdout the Rectangle instance with the character #"""
         for i in range(self.__height):
             print("#" * self.__width)
+
+    def __str__(self) -> str:
+        """Create a string method."""
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format
+                (self.id, self.x, self.y, self.width, self.height))
