@@ -75,3 +75,8 @@ class Rectangle(Base):
             area (int): Result of product of width and height.
         """
         return self.__width * self.height
+
+    def display(self):
+        """Prints in stdout the Rectangle instance with the character #"""
+        for i in range(self.__height):
+            print("#" * self.__width)

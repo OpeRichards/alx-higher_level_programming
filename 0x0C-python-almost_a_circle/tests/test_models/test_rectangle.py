@@ -205,6 +205,36 @@ class TestMaxInteger(unittest.TestCase):
         r = Rectangle(10, 12, 2, 3)
         self.assertEqual(r.area(), 120)
 
+    def test_display_method_exists(self):
+        r = Rectangle(1, 2)
+        self.assertTrue(hasattr(r, "display"))
+        self.assertTrue(callable(getattr(r, "display")))
+
+    def test_display_for_10_by_12_rectangle(self):
+        r = Rectangle(10, 12)
+        expected_output = print(("#" * 12 + "\n") * 10)
+        self.assertEqual(r.display(), expected_output)
+
+    def test_display_for_1_by_12_rectangle(self):
+        r = Rectangle(1, 12)
+        expected_output = print("#" + "\n" * 11)
+        self.assertEqual(r.display(), expected_output)
+
+    def test_display_for_10_by_1_rectangle(self):
+        r = Rectangle(10, 1)
+        expected_output = print("#" * 10 + "\n")
+        self.assertEqual(r.display(), expected_output)
+
+    def test_display_for_3_by_3_square(self):
+        r = Rectangle(3, 3)
+        expected_output = print(("#" * 3 + "\n") * 3)
+        self.assertEqual(r.display(), expected_output)
+
+    def test_display_for_1_by_1_square(self):
+        r = Rectangle(1, 1)
+        expected_output = print("#\n")
+        self.assertEqual(r.display(), expected_output)
+
 
 if __name__ == '__main__':
     unittest.main()
