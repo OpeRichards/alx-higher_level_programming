@@ -18,7 +18,7 @@ if (argCount <= 1) {
     if (num > highest) {
       secondHighest = highest;
       highest = num;
-    } else if (num > secondHighest && num != highest) {
+    } else if (num > secondHighest && num !== highest) {
       secondHighest = num;
     }
   }
