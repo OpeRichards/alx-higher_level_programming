@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 /* Count number of arguments passed */
-const argCount = process.argv.length - 2
+const argCount = process.argv.length - 2;
 const args = process.argv.slice(2).map(Number);
 
 /* Search for the second biggest number */
